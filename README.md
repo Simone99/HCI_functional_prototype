@@ -1,4 +1,5 @@
 # HCI_functional_prototype
-Dino Husnic
-
-Mridvika Suresh
+## Team
+- Dino Husnic<br/>
+- Mridvika Suresh<br/>
+- Simone Zanella<br />
