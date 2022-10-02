@@ -159,7 +159,7 @@ function CardCategoryStore(props){
 function CardPastOrders(props){
     return(
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" style={{ height: '13rem' }} src={props.link} />
+            <Card.Img variant="top" style={{ height: '13rem', objectFit: 'contain' }} src={props.link} />
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">{props.date}</Card.Subtitle>
