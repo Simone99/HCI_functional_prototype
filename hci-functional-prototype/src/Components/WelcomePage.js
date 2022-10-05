@@ -173,10 +173,12 @@ function CardPastOrders(props){
                         </Col>
                     </Row>
                 </Card.Text>
-                <Button variant="primary">VIEW ORDER</Button>
+                <div style = {{'textAlign' : 'center'}}>
+                    <Button variant="primary">VIEW ORDER</Button>
+                </div>
             </Card.Body>
         </Card>
     );
 }
 
-export{WelcomePage};
+export{WelcomePage, storeMap};
