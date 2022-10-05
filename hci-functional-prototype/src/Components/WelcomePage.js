@@ -150,7 +150,7 @@ function CardCategoryStore(props){
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" style={{ height: '15rem', objectFit: props.cover? 'cover':'contain' }} src={props.link} />
             <Card.Body>
-                <Card.Title>{props.title}</Card.Title>
+                <Card.Title style = {{'textAlign' : 'center'}}>{props.title}</Card.Title>
             </Card.Body>
         </Card>
     );
