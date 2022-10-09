@@ -194,4 +194,4 @@ function filterProducts(product, store, category, minPrice, maxPrice, keyword){
     return false;
 }
 
-export{SearchResultPage}
+export{SearchResultPage, CardProduct}
