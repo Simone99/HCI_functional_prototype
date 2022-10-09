@@ -122,9 +122,9 @@ function App() {
     <Container fluid>
       <Router>
         <Routes>
-          <Route path="/" element = {<Layout/>}>
+          <Route path="/HCI_functional_prototype/" element = {<Layout/>}>
             <Route index element={<WelcomePage/>}/>
-            <Route path="/products" element={<SearchResultPage/>}/>
+            <Route path="/HCI_functional_prototype/products" element={<SearchResultPage/>}/>
             <Route path="*" element={<><h1>No content here!</h1><h2>Don't modify the URL please...</h2></>}/>
           </Route>
         </Routes>

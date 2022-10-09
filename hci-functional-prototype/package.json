@@ -2,7 +2,7 @@
   "name": "hci-functional-prototype",
   "version": "0.1.0",
   "homepage": "https://simone99.github.io/HCI_functional_prototype",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
