@@ -1,10 +1,16 @@
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { useNavigate } from 'react-router-dom';
 
 function TopBar(props){
+
+    const [keyword, setKeyword] = useState('');
+    const navigate = useNavigate();
+
     return(
         <Navbar bg="light" expand="lg">
             <Container fluid>
@@ -26,8 +32,10 @@ function TopBar(props){
                             placeholder="Search"
                             className="me-2"
                             aria-label="Search"
+                            value = {keyword}
+                            onChange = { e => setKeyword(e.target.value)}
                         />
-                        <Button variant="outline-success">Search</Button>
+                        <Button variant="outline-success" onClick={() => navigate(`products?keyword=${keyword}`, {state: keyword})}>Search</Button>
                     </Form>
                     <Nav
                         className="me-auto my-2 my-lg-0"
