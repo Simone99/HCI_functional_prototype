@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Pineapple",
+        "price": "$1.40",
+        "store": "Target",
+        "src": "pineapple",
+        "tags": "Bestseller"
+    },
+    {
+        "title": "Pear",
+        "price": "$2.80",
+        "store": "Target",
+        "src": "pear",
+        "tags": "Low in Stock"
+    },
+    {
+        "title": "Banana",
+        "price": "$0.79",
+        "store": "Jewel Osco",
+        "src": "banana",
+        "tags": ["Bestseller", "Low in Stock"]
+    },
+    {
+        "title": "Lemon",
+        "price": "$1.09",
+        "store": "Aldi",
+        "src": "lemon",
+        "tags": "Many in stock"
+    },
+    {
+        "title": "Papaya",
+        "price": "$3.00",
+        "store": "Whole Foods",
+        "src": "papaya",
+        "tags": "Organic"
+    },
+    {
+        "title": "Mango",
+        "price": "$3.40",
+        "store": "Walmart",
+        "src": "mango",
+        "tags": "Many in stock"
+    },
+    {
+        "title": "Strawberry",
+        "price": "$3.00",
+        "store": "Jewel Osco",
+        "src": "strawberry",
+        "tags": "Low in Stock"
+    },
+    {
+        "title": "Orange",
+        "price": "$2.00",
+        "store": "Target",
+        "src": "orange",
+        "tags": "Bestseller"
+    },
+    {
+        "title": "Cherry",
+        "price": "$1.00",
+        "store": "Walmart",
+        "src": "cherry",
+        "tags": "Many in stock"
+    },
+    {
+        "title": "Avocado",
+        "price": "$2.05",
+        "store": "Target",
+        "src": "avocado",
+        "tags": "Organic"
+    }
+]

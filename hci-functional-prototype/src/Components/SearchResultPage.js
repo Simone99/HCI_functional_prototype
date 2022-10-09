@@ -173,4 +173,4 @@ function SideBarElementTitle(props){
     );
 }
 
-export{SearchResultPage}
+export{SearchResultPage, CardProduct}

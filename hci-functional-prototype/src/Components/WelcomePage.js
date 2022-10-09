@@ -181,4 +181,4 @@ function CardPastOrders(props){
     );
 }
 
-export{WelcomePage, storeMap};
+export{WelcomePage, storeMap, CardPastOrders};
