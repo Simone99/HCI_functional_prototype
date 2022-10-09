@@ -21,6 +21,7 @@ import jewel from '../Images/jewel.png'
 import pete from '../Images/pete.jpg'
 import target from '../Images/target.jpg'
 import walmart from '../Images/walmart.png'
+import { useNavigate } from 'react-router-dom';
 
 const categoryMap = {
     'Healthy' : Healthy,
@@ -86,6 +87,13 @@ const storeMap = {
 };
 
 function WelcomePage(props){
+    const navigate = useNavigate();
+
+    const onCategoryClick = /*async*/ (title, paramName) => {
+        //await props.scrapeFunction(title, 'All');
+        navigate(`products?${paramName}=${title}`);
+    };
+
     return(
         <>
             <Carousel variant="dark" indicators={false}>
@@ -116,7 +124,7 @@ function WelcomePage(props){
                 <Carousel variant="dark" indicators={false}>
                     <Carousel.Item>
                         <Row>
-                            {Object.entries(categoryMap).map(keyValue => <CardCategoryStore link = {keyValue[1]} title = {keyValue[0]} cover = {true}/>)}
+                            {Object.entries(categoryMap).map(keyValue => <CardCategoryStore key = {`${keyValue[0]}:category`} link = {keyValue[1]} title = {keyValue[0]} cover = {true} onclick = {() => onCategoryClick(keyValue[0], 'category')}/>)}
                         </Row>
                     </Carousel.Item>
                 </Carousel>
@@ -126,7 +134,7 @@ function WelcomePage(props){
                 <Carousel variant="dark" indicators={false}>
                     <Carousel.Item>
                         <Row>
-                            {pastOrders.map(order => <CardPastOrders title = {order['title']} date = {order['date']} nItems = {order['nItems']} total = {order['total']} link = {order['image']}/>)}
+                            {pastOrders.map(order => <CardPastOrders key = {`${order['title']}_${order['date']}_${order['nItems']}_${order['total']}`} title = {order['title']} date = {order['date']} nItems = {order['nItems']} total = {order['total']} link = {order['image']}/>)}
                         </Row>
                     </Carousel.Item>
                 </Carousel>
@@ -136,7 +144,7 @@ function WelcomePage(props){
                 <Carousel variant="dark" indicators={false}>
                     <Carousel.Item>
                         <Row>
-                        {Object.entries(storeMap).map(keyValue => <CardCategoryStore link = {keyValue[1]} title = {keyValue[0]} cover = {false}/>)}
+                            {Object.entries(storeMap).map(keyValue => <CardCategoryStore key = {`${keyValue[0]}_store`} link = {keyValue[1]} title = {keyValue[0]} cover = {false} onclick = {() => {onCategoryClick(keyValue[0], 'store')}}/>)}
                         </Row>
                     </Carousel.Item>
                 </Carousel>
@@ -147,7 +155,7 @@ function WelcomePage(props){
 
 function CardCategoryStore(props){
     return(
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }} onClick={props.onclick}>
             <Card.Img variant="top" style={{ height: '15rem', objectFit: props.cover? 'cover':'contain' }} src={props.link} />
             <Card.Body>
                 <Card.Title style = {{'textAlign' : 'center'}}>{props.title}</Card.Title>
