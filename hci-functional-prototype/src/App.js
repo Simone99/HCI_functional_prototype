@@ -7,7 +7,6 @@ import { WelcomePage } from './Components/WelcomePage';
 import { SearchResultPage } from './Components/SearchResultPage';
 import { Product } from './Components/Product';
 import data from './productData.json';
-import { SearchResultPage } from './Components/SearchResultsPage';
 import { useEffect, useState } from 'react';
 import banana from './Images/Banana.jpeg'
 import pineapple from './Images/Pineapple.jpeg'
@@ -96,7 +95,6 @@ const products = [
 ];
 
 function App() {
-  const [items, setItems] = useState(data)
   //const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -128,7 +126,7 @@ function App() {
           <Route path="/HCI_functional_prototype/" element = {<Layout/>}>
             <Route index element={<WelcomePage/>}/>
             <Route path="/HCI_functional_prototype/products" element={<SearchResultPage/>}/>
-            <Route path="/productDes" element={<Product items = {items} setItems = {setItems}/>}/>
+            <Route path="/HCI_functional_prototype/productDes" element={<Product/>}/>
             <Route path="*" element={<><h1>No content here!</h1><h2>Don't modify the URL please...</h2></>}/>
           </Route>
         </Routes>

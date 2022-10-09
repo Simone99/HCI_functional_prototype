@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Col, Row, Form, Button, Card} from 'react-bootstrap';
 import { storeMap } from './WelcomePage';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import MultiRangeSlider from "multi-range-slider-react";
 import { products } from '../App';
@@ -15,6 +15,8 @@ function SearchResultPage(props){
     const [keyword, setKeyword] = useState(location.state == ""? null: location.state);
     const [minPriceValue, setMinPriceValue] = useState(0);
     const [maxPriceValue, setMaxPriceValue] = useState(50);
+    const navigate = useNavigate();
+
     const handleInput = (e) => {
         setMinPriceValue(e.minValue);
         setMaxPriceValue(e.maxValue);
@@ -91,7 +93,7 @@ function SearchResultPage(props){
             </Col>
             <Col>
                 <Row>
-                    {displayProducts.map(fruit => <CardProduct link = {fruit.src} title = {fruit.title} price = {fruit.price} store = {fruit.store}/>)}
+                    {displayProducts.map(fruit => <CardProduct link = {fruit.src} title = {fruit.title} price = {fruit.price} store = {fruit.store} onclick = {() => goToDescription(fruit.title, navigate)}/>)}
                 </Row>
             </Col>
         </>
@@ -100,7 +102,7 @@ function SearchResultPage(props){
 
 function CardProduct(props){
     return(
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }} onClick = {props.onclick}>
             <Card.Img variant="top" style={{ height: '13rem', objectFit: 'contain' }} src={props.link} />
             <Card.Body>
                 <Card.Title>
@@ -194,4 +196,8 @@ function filterProducts(product, store, category, minPrice, maxPrice, keyword){
     return false;
 }
 
-export{SearchResultPage, CardProduct}
+const goToDescription = (productName, navigate) => {
+    navigate("/HCI_functional_prototype/productDes", {"state": productName});
+}
+
+export{SearchResultPage, CardProduct, goToDescription}

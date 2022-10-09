@@ -14,7 +14,7 @@ function TopBar(props){
     return(
         <Navbar bg="light" expand="lg">
             <Container fluid>
-                <Navbar.Brand href="#">EzShop</Navbar.Brand>
+                <Navbar.Brand onClick={() => navigate('/HCI_functional_prototype')}>EzShop</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <img
