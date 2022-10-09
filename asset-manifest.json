@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HCI_functional_prototype/static/css/main.f5515088.css",
-    "main.js": "/HCI_functional_prototype/static/js/main.a4d68f36.js",
+    "main.js": "/HCI_functional_prototype/static/js/main.ccce41cc.js",
     "static/js/787.1908cab7.chunk.js": "/HCI_functional_prototype/static/js/787.1908cab7.chunk.js",
     "static/media/Carousel2.png": "/HCI_functional_prototype/static/media/Carousel2.8179aff70d498d816216.png",
     "static/media/Bakery.jpg": "/HCI_functional_prototype/static/media/Bakery.af66e496ff0ed381eb94.jpg",
@@ -32,11 +32,11 @@
     "static/media/ChickenBreast.jpeg": "/HCI_functional_prototype/static/media/ChickenBreast.824a18bd64fe78a7013d.jpeg",
     "index.html": "/HCI_functional_prototype/index.html",
     "main.f5515088.css.map": "/HCI_functional_prototype/static/css/main.f5515088.css.map",
-    "main.a4d68f36.js.map": "/HCI_functional_prototype/static/js/main.a4d68f36.js.map",
+    "main.ccce41cc.js.map": "/HCI_functional_prototype/static/js/main.ccce41cc.js.map",
     "787.1908cab7.chunk.js.map": "/HCI_functional_prototype/static/js/787.1908cab7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f5515088.css",
-    "static/js/main.a4d68f36.js"
+    "static/js/main.ccce41cc.js"
   ]
 }
